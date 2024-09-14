@@ -22,7 +22,7 @@
 
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.19;
+pragma solidity ^0.8.19;
 
 import { OracleLib, AggregatorV3Interface } from "./libraries/OracleLib.sol";
 import { ReentrancyGuard } from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
@@ -93,7 +93,7 @@ contract DSCEngine is ReentrancyGuard {
     ///////////////////
     event CollateralDeposited(address indexed user, address indexed token, uint256 indexed amount);
     event CollateralRedeemed(address indexed redeemFrom, address indexed redeemTo, address token, uint256 amount); // if
-        // redeemFrom != redeemedTo, then it was liquidated
+    // redeemFrom != redeemedTo, then it was liquidated
 
     ///////////////////
     // Modifiers
